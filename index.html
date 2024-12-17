@@ -3,52 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download My CV</title>
+    <title>My CV & Portfolio</title>
     <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: black;
+            background-color: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            text-align: center;
         }
+
+        .container {
+            padding: 40px;
+            border-radius: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
         .button-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
+            align-items: center;
         }
-        .download-btn, .portfolio-btn {
-            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+
+        /* Common button styles */
+        .btn {
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
             border: none;
             color: white;
-            padding: 20px 40px;
-            font-size: 24px;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
             text-transform: uppercase;
-            border-radius: 10px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0px 5px 20px rgba(255, 65, 108, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 250px;
             text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 140, 255, 0.3);
         }
-        .download-btn:hover, .portfolio-btn:hover {
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            box-shadow: 0px 10px 30px rgba(255, 65, 108, 0.6);
-            transform: scale(1.1);
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 140, 255, 0.5);
         }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        /* A bit of spacing at the bottom for aesthetics */
+        .container {
+            padding-bottom: 50px;
+        }
+
     </style>
 </head>
 <body>
-    <div class="button-container">
-        <a href="https://drive.google.com/file/d/1HvRcWwr7_HoGzWvl_05p62oIoiu3_IQV/view" target="_blank">
-            <button class="download-btn">Download My CV</button>
-        </a>
-        <a href="https://digitalmarknurul.blogspot.com/" target="_blank">
-            <button class="portfolio-btn">Visit My Portfolio</button>
-        </a>
+    <div class="container">
+        <h1>Welcome to My Digital Portfolio</h1>
+        <div class="button-container">
+            <a href="https://drive.google.com/file/d/1HvRcWwr7_HoGzWvl_05p62oIoiu3_IQV/view" target="_blank">
+                <button class="btn">Download My CV</button>
+            </a>
+            <a href="https://digitalmarknurul.blogspot.com/" target="_blank">
+                <button class="btn">Visit My Portfolio</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>
