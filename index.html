@@ -14,6 +14,9 @@
 
         body {
             background-color: #121212;
+            background-image: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png');
+            background-size: cover;
+            background-attachment: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,13 +24,14 @@
             font-family: 'Roboto', sans-serif;
             color: white;
             text-align: center;
+            overflow: hidden;
         }
 
         .container {
             padding: 40px;
             border-radius: 20px;
-            background-color: #1e1e1e;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent background */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         h1 {
@@ -43,9 +47,9 @@
             align-items: center;
         }
 
-        /* Common button styles */
+        /* Modern button styles with different color */
         .btn {
-            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            background-color: #ff6f61; /* Soft red color */
             border: none;
             color: white;
             padding: 15px 40px;
@@ -54,24 +58,40 @@
             text-transform: uppercase;
             border-radius: 50px;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
             width: 250px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 140, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(255, 111, 97, 0.5);
         }
 
         .btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 140, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(255, 111, 97, 0.8);
+            background-color: #ff9b91; /* Lighter red when hovering */
         }
 
         .btn:focus {
             outline: none;
         }
 
-        /* A bit of spacing at the bottom for aesthetics */
-        .container {
-            padding-bottom: 50px;
+        /* Animated Wave Effect */
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            animation: wave-animation 6s linear infinite;
+        }
+
+        @keyframes wave-animation {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
         }
 
     </style>
@@ -88,5 +108,7 @@
             </a>
         </div>
     </div>
+    <!-- Animated Wave Effect -->
+    <div class="wave"></div>
 </body>
 </html>
