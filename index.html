@@ -34,22 +34,15 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
         .button-container {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 10px; /* Reduced gap between the buttons */
             align-items: center;
         }
 
-        /* Modern button styles with different color */
+        /* Modern button styles with different colors */
         .btn {
-            background-color: #ff6f61; /* Soft red color */
             border: none;
             color: white;
             padding: 15px 40px;
@@ -64,10 +57,20 @@
             box-shadow: 0 5px 20px rgba(255, 111, 97, 0.5);
         }
 
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 111, 97, 0.8);
-            background-color: #ff9b91; /* Lighter red when hovering */
+        .btn1 {
+            background-color: #ffb300; /* Yellow/Orange */
+        }
+
+        .btn1:hover {
+            background-color: #ffdd47; /* Lighter yellow/orange */
+        }
+
+        .btn2 {
+            background-color: #4caf50; /* Green */
+        }
+
+        .btn2:hover {
+            background-color: #66bb6a; /* Lighter green */
         }
 
         .btn:focus {
@@ -98,13 +101,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Digital Portfolio</h1>
         <div class="button-container">
             <a href="https://drive.google.com/file/d/1HvRcWwr7_HoGzWvl_05p62oIoiu3_IQV/view" target="_blank">
-                <button class="btn">Download My CV</button>
+                <button class="btn btn1">Download My CV</button>
             </a>
             <a href="https://digitalmarknurul.blogspot.com/" target="_blank">
-                <button class="btn">Visit My Portfolio</button>
+                <button class="btn btn2">Visit My Portfolio</button>
             </a>
         </div>
     </div>
