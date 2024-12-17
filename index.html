@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download My CV</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .download-btn, .portfolio-btn {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 5px 20px rgba(255, 65, 108, 0.4);
+            width: 250px;
+            text-align: center;
+        }
+        .download-btn:hover, .portfolio-btn:hover {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            box-shadow: 0px 10px 30px rgba(255, 65, 108, 0.6);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://drive.google.com/file/d/1HvRcWwr7_HoGzWvl_05p62oIoiu3_IQV/view" target="_blank">
+            <button class="download-btn">Download My CV</button>
+        </a>
+        <a href="https://digitalmarknurul.blogspot.com/" target="_blank">
+            <button class="portfolio-btn">Visit My Portfolio</button>
+        </a>
+    </div>
+</body>
+</html>
