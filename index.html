@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV & Portfolio</title>
     <style>
-        /* Basic reset */
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -13,82 +13,126 @@
         }
 
         body {
-            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghkWa-yNAm5M_JAGbcyv4Pb2j8NI11s34VkaXrAZgtLEiUd_q3oKjBPN2TjZXOSpcn0QXW-lQ1htkiGX_kbnX-9Yo_v_-w96BUa-oBPFCuDvzhXjNjsAO9zkQkfl6hjmuB8iKCIkMuyOGw4_66_FtxAlGsbdY9pbMev0p7kxniMmvm6Bjd_QNfDdH4YHA/s1920/1000005819.webp');
-            background-size: cover; /* Ensure the image fills the entire screen */
-            background-position: center;
-            background-repeat: no-repeat; /* Prevent the background from repeating */
-            background-attachment: fixed; /* Keep the image fixed during scroll */
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #3a6186, #89253e);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            font-family: 'Roboto', sans-serif;
-            color: white;
-            text-align: center;
-            overflow: hidden;
+            color: #fff;
         }
 
         .container {
+            text-align: center;
             padding: 40px;
-            border-radius: 20px;
-            background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent background */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .container h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .container p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            color: #ddd;
         }
 
         .button-container {
             display: flex;
             flex-direction: column;
-            gap: 10px; /* Reduced gap between the buttons */
-            align-items: center;
+            gap: 15px;
         }
 
-        /* Modern button styles with different colors */
         .btn {
-            border: none;
-            color: white;
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 500;
             text-transform: uppercase;
-            border-radius: 50px;
+            color: #fff;
+            background: linear-gradient(45deg, #ffa726, #ff7043);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-            width: 250px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .btn1 {
-            background-color: #ffa726; /* Orange */
-        }
-
-        .btn1:hover {
-            background-color: #ffcc80; /* Lighter orange */
+        .btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(45deg, #ff7043, #ffa726);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
         .btn2 {
-            background-color: #66bb6a; /* Green */
+            background: linear-gradient(45deg, #66bb6a, #43a047);
         }
 
         .btn2:hover {
-            background-color: #81c784; /* Lighter green */
+            background: linear-gradient(45deg, #43a047, #66bb6a);
         }
 
-        .btn:focus {
-            outline: none;
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ffa726;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <h1>Welcome</h1>
+        <p>Your gateway to my professional profile and career portfolio.</p>
         <div class="button-container">
-            <a href="https://drive.google.com/file/d/1HvRcWwr7_HoGzWvl_05p62oIoiu3_IQV/view" target="_blank">
-                <button class="btn btn1">Download My CV</button>
+            <a href="https://drive.google.com/file/d/1tiHsxCTYhgsoetik8vtTgfnDCn-QsxDK/view?usp=drive_link" target="_blank">
+                <button class="btn">Download My CV</button>
             </a>
             <a href="https://digitalmarknurul.blogspot.com/" target="_blank">
                 <button class="btn btn2">Visit My Portfolio</button>
             </a>
         </div>
+        <footer>
+            Made with ❤ by <a href="https://digitalmarknurul.blogspot.com/" target="_blank">Saadaf Amin</a>
+        </footer>
     </div>
 </body>
 </html>
